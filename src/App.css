@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+}
+
+.active {
+  color: rgb(68, 94, 209);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: orangered;
+  border-radius: 10px;
+}
