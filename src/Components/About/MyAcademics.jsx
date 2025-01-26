@@ -5,17 +5,17 @@ const MyAcademics = () => {
     <>
       <div className="px-5 sm:px-10 md:px-16 lg:px-24">
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mt-20 mb-10">
+        <h1 className="text-4xl text-center sm:text-4xl md:text-5xl lg:text-5xl font-bold mt-12 md:text-left">
           My Academics
         </h1>
 
-        <div className="flex flex-col md:flex-row justify-center items-start gap-10 md:gap-16 mt-20 mb-20 md:mr-[40%]">
+        <div className="flex md:flex-row gap-5 md:gap-16 mt-10 mb-5 md:mr-[40%]">
           {/* Timeline */}
-          <div className="relative h-[550px] w-[2px] bg-black hidden md:block sm:flex-row">
+          <div className="relative h-[634px] w-[2px] bg-black md:block sm:flex-row mt-2">
             <div className="absolute top-[0%] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="absolute top-[28%] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="absolute top-[54%] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="absolute top-[80%] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="absolute top-[25%] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="absolute top-[49%] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="absolute top-[74%] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-red-500 rounded-full"></div>
           </div>
 
           {/* Academics Details */}

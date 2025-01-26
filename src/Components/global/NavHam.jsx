@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CustomMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const menuRef = useRef(null);
+  const overlayRef = useRef(null);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -13,64 +14,84 @@ const CustomMenu = () => {
     setIsMenuOpen(false);
   };
 
-  return (
-    <div className="relative flex justify-center mt-[75px] z-30  ">
-      {/* Menu container */}
-      <div className=" w-full h-[80px]  bg-slate-700 flex justify-center items-center px-5 fixed ">
-        <div className="flex justify-end  items-center gap-3 px-5 w-[140px] h-10 bg-black ml-[70%] border-2 cursor-pointer rounded-sm py-5">
-          {/* Title */}
-          <h3 className="text-white text-xl font-semibold">Menu</h3>
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !overlayRef.current.contains(event.target)
+      ) {
+        closeMenu();
+      }
+    };
 
-          {/* Hamburger Icon */}
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div className="relative">
+      {/* Menu container */}
+      <div className="w-full h-[60px] bg-slate-700 flex justify-between items-center px-5 sm:px-10 fixed top-16 left-0 z-30">
+        {/* Logo or Title */}
+        <h3 className="text-white text-xl font-semibold">Menu</h3>
+
+        {/* Hamburger Icon */}
+        <div className="flex items-center gap-3 cursor-pointer">
           <RxHamburgerMenu
             onClick={toggleMenu}
-            className="text-white text-2xl font-semibold mt-1"
+            className="text-white text-3xl sm:hidden" // Show on small screens
           />
         </div>
       </div>
 
-      {/* Overlay */}
       {isMenuOpen && (
         <div
+          ref={overlayRef}
           onClick={closeMenu}
-          className="absolute bg-black bg-opacity-50 z-10"
+          className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-20"
         ></div>
       )}
 
-      {/* Mobile Menu (appear when the hamburger icon is clicked) */}
       {isMenuOpen && (
-        <div className="absolute top-[80px] w-full bg-black text-white text-lg flex flex-col items-start px-5 py-4 z-20 ">
+        <div
+          ref={menuRef}
+          className="fixed top-[123px] w-full bg-black text-white text-l flex flex-col items-start px-5 py-4 z-30"
+        >
           <Link
             to="/Home"
-            className="py-2 hover:bg-slate-700 w-[100%] px-3 rounded-lg"
+            className="py-2 hover:bg-slate-700 w-full px-3 rounded-lg"
             onClick={closeMenu}
           >
             Home
           </Link>
           <Link
             to="/About"
-            className="py-2 w-[100%] px-3 hover:bg-slate-700 rounded-lg"
+            className="py-2 w-full px-3 hover:bg-slate-700 rounded-lg"
             onClick={closeMenu}
           >
             About
           </Link>
           <Link
             to="/Work"
-            className="py-2 w-[100%] px-3 hover:bg-slate-700 rounded-lg"
+            className="py-2 w-full px-3 hover:bg-slate-700 rounded-lg"
             onClick={closeMenu}
           >
             Work
           </Link>
           <Link
             to="/Services"
-            className="py-2 w-[100%] px-3 hover:bg-slate-700 rounded-lg"
+            className="py-2 w-full px-3 hover:bg-slate-700 rounded-lg"
             onClick={closeMenu}
           >
             Services
           </Link>
           <Link
             to="/Contact"
-            className="py-2 w-[100%] px-3 hover:bg-slate-700 rounded-lg"
+            className="py-2 w-full px-3 hover:bg-slate-700 rounded-lg"
             onClick={closeMenu}
           >
             Contact

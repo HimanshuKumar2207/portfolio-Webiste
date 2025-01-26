@@ -13,10 +13,14 @@ import "../../App.css";
 const Footer = () => {
   return (
     <>
-      <div className="bg-black w-full h-auto flex flex-col md:flex-row justify-between px-4 py-10 mt-10">
+      <div className="bg-black w-full h-auto flex flex-col md:flex-row justify-between px-4 mt-10 py-5">
         {/* Left footer section */}
         <div className="text-white flex flex-col items-center md:items-start md:w-1/2">
-          <Link to="/Home" className="mb-4">
+          <Link
+            to="/Home"
+            className="mb-4"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             <img
               src={MainLogo}
               alt="Logo"
@@ -59,9 +63,9 @@ const Footer = () => {
         </div>
 
         {/* Right footer section */}
-        <div className="flex flex-col justify-center items-center md:items-start gap-4 mt-10 md:mt-[300px] md:flex-row sm:flex-row md:mr-20">
+        <div className="flex flex-row justify-center items-center md:items-start gap-4  md:mt-[300px] md:flex-row sm:flex-row md:mr-20  ">
           {/* Download CV Button */}
-          <div className="mb-4 md:mb-0">
+          <div className=" md:mb-0">
             <input
               type="button"
               value="Download CV"
@@ -76,9 +80,9 @@ const Footer = () => {
           </div>
 
           {/* Let's Talk Button */}
-          <div className="flex">
-            <Link to="/contact ">
-              <button className="  border-2 border-orange-500 px-3 py-2 text-lg rounded-full text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-400 ">
+          <div className="">
+            <Link to="/contact " onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <button className="border-2 border-orange-500 px-5 py-2 text-lg rounded-full text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-400 cursor-pointer">
                 Let's Talk
               </button>
             </Link>

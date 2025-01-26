@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Profile from "../../Assets/profile Pic.png";
-import { Link } from "react-router-dom";
-import skill from "../Home/Habout";
+import myResume from "../../Assets/My Resume.pdf";
 const Hero = () => {
   const careers = [
     "Software Developer",
@@ -38,19 +37,19 @@ const Hero = () => {
   }, [careerIndex, characterIndex, careers]);
 
   return (
-    <div className="w-full h-auto bg-orange-500 flex flex-col md:flex-row justify-center items-center py-10 px-4 lg:px-20 md:h-[670px]">
+    <div className="w-full h-auto bg-orange-500 flex flex-col md:flex-row justify-center items-center py-10 px-4 lg:px-20 md:h-[550px] lg:h-[700px] mt-[115px] md:mt-4">
       {/* Profile Image Section */}
       <div className="flex justify-center mb-6 md:mb-0 md:justify-around w-full md:w-1/2">
         <img
           src={Profile}
           alt="Profile-pic"
-          className="h-[250px] sm:h-[350px] md:h-[400px] lg:h-[470px] w-[250px] sm:w-[350px] md:w-[320px] lg:w-[450px] rounded-full transform transition-transform duration-300 ease-in-out hover:scale-105 mt-10 md:mt-[60px]"
+          className="h-[250px] sm:h-[350px] md:h-[400px] lg:h-[470px] w-[250px] sm:w-[350px] md:w-[320px] lg:w-[450px] rounded-full transform transition-transform duration-300 ease-in-out hover:scale-105 md:mt-[60px]"
         />
       </div>
 
       {/* Text Section */}
-      <div className="flex flex-col items-center md:items-start justify-center mt-6 md:mt-0 w-full md:w-1/2">
-        <div className="mb-8 text-center md:text-left font-serif">
+      <div className="flex flex-col items-center md:items-start justify-center md:mt-0 w-full md:w-1/2">
+        <div className="mb-5 text-center md:text-left font-serif">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-3 leading-tight">
             Hey, I am <br />
             <span className="text-4xl sm:text-5xl lg:text-6xl text-white">
@@ -66,22 +65,18 @@ const Hero = () => {
         </div>
 
         {/* Button Section */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-2 justify-center md:justify-start w-full">
-          <Link to={skill}>
-            <button className="mb-4 sm:mb-0 border-2 border-white px-6 py-2 text-lg rounded-full text-white hover:bg-white hover:text-orange-500 transition-all duration-400">
-              Skills
-            </button>
-          </Link>
-          <Link to="">
-            <button className="mb-4 sm:mb-0 border-2 border-white px-6 py-2 text-lg rounded-full text-white hover:bg-white hover:text-orange-500 transition-all duration-400">
-              Skills
-            </button>
-          </Link>
-          <Link to="">
-            <button className="mb-4 sm:mb-0 border-2 border-white px-6 py-2 text-lg rounded-full text-white hover:bg-white hover:text-orange-500 transition-all duration-400">
-              Skills
-            </button>
-          </Link>
+        <div className="">
+          <input
+            type="button"
+            value="Download CV"
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = myResume; // Link to the resume file
+              link.download = "My_CV.pdf"; // Name the file to be downloaded
+              link.click();
+            }}
+            className="bg-orange-500 hover:bg-white hover:text-orange-500 border-2 border-white text-white font-semibold py-2 md:py-3  md:px-6 px-6 text-sm rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
+          />
         </div>
       </div>
     </div>

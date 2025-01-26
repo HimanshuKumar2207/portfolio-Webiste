@@ -30,9 +30,12 @@ const Pages = [
 const Navbar = () => {
   return (
     <>
-      <nav className="w-full fixed bg-orange-500 top-0 flex items-center justify-around p-3 cursor-pointer shadow-xl z-10 ">
-        <Link to="/Home">
-          <img src={MainLogo} alt="Logo" className="h-16  " />
+      <nav className="w-full fixed bg-orange-500 top-0 flex items-center md:justify-around justify-center p-1 cursor-pointer shadow-xl z-10 ">
+        <Link
+          to="/Home"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img src={MainLogo} alt="Logo" className="h-16 " />
         </Link>
 
         <div className="hidden md:flex space-x-10 text-[17px] items-center ">
@@ -41,6 +44,7 @@ const Navbar = () => {
               key={index}
               to={page.pathName}
               className="text-white font-semibold relative group"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               {page.name}
               {/* Hover underline effect */}
@@ -49,7 +53,11 @@ const Navbar = () => {
           ))}
         </div>
 
-        <Link to="/Contact" className="">
+        <Link
+          to="/Contact"
+          className="hidden md:block"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
           <button className="border-2 text-white border-white px-4 py-1 text-l rounded-full hover:bg-white hover:text-orange-500 transition-all duration-400 lg:block ">
             Let's Talk
           </button>

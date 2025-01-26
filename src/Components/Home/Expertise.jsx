@@ -8,7 +8,7 @@ const Expertise = () => {
   return (
     <>
       <div className="w-full mt-[100px] mb-20">
-        <h1 className="text-5xl sm:text-5xl md:text-5xl mb-14 sm:mb-6 md:mb-10 ml-5 md:font-bold md:ml-[130px]">
+        <h1 className="text-4xl text-center sm:text-5xl md:text-5xl font-bold mb-6 mt-10 md:text-left lg:ml-24">
           My Expertises
         </h1>
 

@@ -31,7 +31,7 @@ const ContactMe = () => {
   return (
     <div className="mt-20 mb-20 px-4">
       {/* Flex container for form and contact info */}
-      <div className="flex flex-col md:flex-row justify-between gap-12 items-start">
+      <div className="flex flex-col md:flex-row justify-around gap-12 items-start ">
         {/* Contact Form Section */}
         <div className="p-6 bg-white shadow-xl rounded-lg w-full md:w-[60%]">
           <h1 className="text-3xl font-semibold mb-8 text-center md:text-left">
@@ -79,7 +79,7 @@ const ContactMe = () => {
         </div>
 
         {/* Contact Info Section */}
-        <div className="space-y-8 w-full md:w-[35%]">
+        <div className="space-y-8 w-full md:w-[35%] px-2">
           <div className="flex items-center gap-4">
             <IoHome className="text-4xl text-orange-500" />
             <div>

@@ -1,21 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "../src/Layout";
-import Preloader from "./Components/Home/preloader";
-
+import Preloader from "./Components/global/Preloader";
+import Anilogo from "./Assets/Logo_1.png"
 
 const App = () => {
-  const [loading, setLoading] = useState();
-
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
   return (
     <>
-      {loading ? <Preloader /> : <>  </>}
-     
+      <Preloader logoText="<> Welcome to my Portfolio webiste </>" logoImage={Anilogo}  />
       <Layout />
     </>
   );

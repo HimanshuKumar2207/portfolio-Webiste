@@ -21,8 +21,8 @@ const images = [
   },
   {
     id: 2,
-    src: "https://food-ordering-website-zeta-two.vercel.app/",
-    codeSrc: "https://github.com/HimanshuKumar2207/Food-ordering-website", // Source code link
+    src: "https://portfolio-webiste-theta.vercel.app/home",
+    codeSrc: "https://github.com/HimanshuKumar2207/portfolio-Webiste", // Source code link
     imgSrc: portfolio,
     alt: "Portfolio Website",
   },
@@ -84,16 +84,16 @@ const Hwork = () => {
   };
 
   return (
-    <div className="w-full md:w-full mt-20 ">
-      <h2 className="text-5xl sm:text-5xl sm:font-bold sm:ml-[90px] md:text-5xl md:font-bold mb-14 text-left md:ml-[130px]">
+    <div className="w-full md:w-full mt-10 md:mt-10 ">
+      <h2 className="text-4xl sm:text-5xl sm:font-bold sm:ml-[90px] md:text-5xl md:font-bold mb-14 font-bold text-center md:text-left lg:mt-20">
         My Works
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 sm:w-[70%] sm:ml-20 lg:w-[80%] md:grid-cols-1 md:w-[75%]  lg:grid-cols-2 md:gap-10 lg:ml-[80px] sm:gap-10 ">
+      <div className="grid grid-cols-1 sm:grid-cols-1 sm:w-[70%] sm:ml-20 lg:w-[80%] md:grid-cols-1 md:w-[75%] gap-8 lg:grid-cols-2 md:gap-10 lg:ml-[120px] sm:gap-10 place-items-center ">
         {visibleImages.map((image) => (
           <div
             key={image.id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden w-full hover:shadow-2xl relative group lg:ml-24 "
+            className="bg-white rounded-lg shadow-lg overflow-hidden w-[90%] hover:shadow-2xl relative group lg:ml-24 lg:w-[100%] md:w-[90%]"
           >
             <div className="relative">
               {/* Image with hover effect */}
@@ -101,6 +101,7 @@ const Hwork = () => {
                 src={image.imgSrc}
                 alt={image.alt}
                 className="h-[280px] w-full object-cover transition-all duration-300 ease-in-out"
+                loading="lazy"
               />
               {/* Overlay that slides in from the top */}
               <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-[-100%] transition-all duration-500 ease-in-out">
@@ -135,7 +136,7 @@ const Hwork = () => {
 
       {showMore && (
         <button
-          className="mt-20 border-2 border-orange-500 px-5 py-2 text-l rounded-full text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-400 mx-auto block"
+          className="mt-10 border-2 border-orange-500 px-5 py-2 text-l rounded-full text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-400 mx-auto block"
           onClick={handleViewMore}
         >
           View More

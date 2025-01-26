@@ -72,14 +72,14 @@ const Habout = () => {
 
   return (
     <>
-      <div className="mb-20 sm:w-[90%]">
-        <div className="h-auto bg-white flex flex-col w-full gap-10 justify-around items-center mt-[50px] px-4 md:px-5 lg:w-[90%] lg:gap-[100px] lg:ml-16 md:flex md:flex-row ">
+      <div className="mb-20 sm:w-[100%]">
+        <div className="h-auto bg-white flex flex-col w-full gap-10 justify-around items-center px-4 md:px-5 lg:w-[90%] lg:gap-[100px] lg:ml-16 md:flex md:flex-row ">
           {/* Right Section */}
           <div className="w-full mb-8 md:mb-0 md:mr-10 ">
-            <h2 className="text-5xl sm:text-5xl md:text-5xl font-bold mb-6 ">
+            <h2 className="text-4xl text-center sm:text-5xl md:text-5xl font-bold mb-6 mt-10 md:text-left ">
               My Skills
             </h2>
-            <div className="md:w-[]">
+            <div className="">
               <p className="mb-8 text-sm sm:text-base md:text-lg">
                 Hi, I’m Himanshu, a front-end developer focused on building
                 responsive and user-friendly web applications. Proficient in
@@ -99,7 +99,7 @@ const Habout = () => {
           </div>
 
           {/* Left Section */}
-          <div className="w-full space-y-6">
+          <div className="w-[90%] mr-10 space-y-6">
             <div className="skill-bar  ">
               <label
                 htmlFor="frontend-skill"
@@ -187,7 +187,7 @@ const Habout = () => {
         </div>
 
         {/* Skill Section Moveable Slider */}
-        <div className="slider-container mt-10 w-full mx-auto rounded-xl lg:w-[80%] md:w-[70%] lg:mr-10">
+        <div className=" hidden md:block lg:block slider-container mt-10 w-full mx-auto rounded-xl lg:w-[80%] md:w-[70%] lg:mr-24">
           <Slider {...moveable}>
             {imagesData.map((image) => (
               <div key={image.id}>
