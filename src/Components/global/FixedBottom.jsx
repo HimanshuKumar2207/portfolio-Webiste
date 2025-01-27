@@ -23,55 +23,36 @@ const FixedBottom = () => {
 
   return (
     <div className="w-full sticky bottom-0 left-0 right-0 bg-orange-500 z-10">
-      
-        <div className="flex sm:flex-row gap-2 sm:gap-6 justify-center items-center sm:space-x-16 sm:space-y-0 space-y-2">
-          {/* Call Button */}
-          <button
-            className={`flex justify-center items-center p-3 transition-colors duration-200 ${
-              activeTab === "call"
-                ? "text-blue-900"
-                : "text-gray-600 hover:text-blue-900"
-            }`}
-            onClick={() => {
-              handleTabClick("call");
-              handleCallClick();
-            }}
-          >
-            <FaPhoneAlt className="text-2xl sm:text-3xl" />
-            <div>
-              <span className="text-sm sm:text-base font-medium sm:mr-[75px] mr-16">
-                Call
-              </span>
-              <p className="text-sm sm:text-lg font-bold">+91 7479867857</p>
-            </div>
-          </button>
+      <div className="flex sm:flex-row gap-5 justify-evenly items-center py-3">
+        {/* Call Button */}
+        <button
+          className={`flex items-center text-blue-600 gap-2 p-3 rounded-lg transition-all duration-200 ${
+            activeTab === "call" ? "ring-2 ring-orange-500" : ""
+          }`}
+          onClick={() => {
+            handleTabClick("call");
+            handleCallClick();
+          }}
+        >
+          <FaPhoneAlt className="text-2xl sm:text-2xl md:text-4xl" />
+          <span className="text-xl lg:text-xl sm:text-base font-medium">Call</span>
+        </button>
 
-          {/* WhatsApp Button */}
-          <button
-            className={`flex justify-center items-center p-2 space-x-2 transition-colors duration-200 ${
-              activeTab === "whatsapp"
-                ? "text-green-600"
-                : "text-green-600 hover:text-green-600"
-            }`}
-
-            onClick={() => {
-              handleTabClick("whatsapp");
-              handleWhatsAppClick();
-            }}
-          >
-            <FaWhatsapp className="text-2xl sm:text-3xl" />
-            <div>
-              <h3 className="text-sm sm:text-sm font-medium">
-                WhatsApp Chat with
-              </h3>
-              <p className="text-l sm:text-2xl font-medium mr-5">
-                Representative
-              </p>
-            </div>
-          </button>
-        </div>
+        {/* WhatsApp Button */}
+        <button
+          className={`flex items-center gap-2 p-3 rounded-lg text-green-600 transition-all duration-200 ${
+            activeTab === "whatsapp" ? "ring-2 ring-green-500" : ""
+          }`}
+          onClick={() => {
+            handleTabClick("whatsapp");
+            handleWhatsAppClick();
+          }}
+        >
+          <FaWhatsapp className="text-2xl sm:text-2xl md:text-4xl" />
+          <span className="text-xl sm:text-base font-medium lg:text-xl">WhatsApp</span>
+        </button>
       </div>
-  
+    </div>
   );
 };
 

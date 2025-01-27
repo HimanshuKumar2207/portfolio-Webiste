@@ -89,11 +89,11 @@ const Hwork = () => {
         My Works
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 sm:w-[70%] sm:ml-20 lg:w-[80%] md:grid-cols-1 md:w-[75%] gap-8 lg:grid-cols-2 md:gap-10 lg:ml-[120px] sm:gap-10 place-items-center ">
+      <div className="grid grid-cols-1 sm:grid-cols-1 sm:w-[70%] sm:ml-20 lg:w-[80%] md:grid-cols-1  gap-8 lg:grid-cols-2 md:gap-10 lg:ml-[120px] sm:gap-10 place-items-center md:place-items-center">
         {visibleImages.map((image) => (
           <div
             key={image.id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden w-[90%] hover:shadow-2xl relative group lg:ml-24 lg:w-[100%] md:w-[90%]"
+            className="bg-white rounded-lg shadow-lg overflow-hidden w-[90%] hover:shadow-2xl relative group lg:ml-24 lg:w-[100%] md:w-[100%] md:ml-24"
           >
             <div className="relative">
               {/* Image with hover effect */}

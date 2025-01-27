@@ -16,7 +16,7 @@ const Banner = ({
         <h1 className="mt-3 sm:mt-20 mb-5 text-4xl sm:text-6xl lg:text-7xl text-white font-bold text-center sm:text-left ">
           {bannerHead}
         </h1>
-        <p className="mb-6 sm:mb-10 text-base sm:text-lg text-white w-full sm:w-[700px] lg:w-[800px] text-center sm:text-left md:text-l">
+        <p className="mb-6 sm:mb-10 text-base sm:text-lg text-white w-full sm:w-[700px] lg:w-[800px] text-left sm:text-left md:text-l">
           {bannerDesc}
         </p>
 

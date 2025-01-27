@@ -8,14 +8,14 @@ const Expertise = () => {
   return (
     <>
       <div className="w-full mt-[100px] mb-20">
-        <h1 className="text-4xl text-center sm:text-5xl md:text-5xl font-bold mb-6 mt-10 md:text-left lg:ml-24">
+        <h1 className="text-4xl text-center sm:text-5xl md:text-5xl font-bold mb-6 mt-10 md:text-left md:px-14">
           My Expertises
         </h1>
 
         {/* Grid container */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-10 w-full place-items-center lg:w-[80%] lg:ml-[200px] lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-10 w-full place-items-center lg:w-[80%] lg:ml-[200px] lg:gap-8 md:gap-0">
           {/* Card 1 */}
-          <div className="w-[90%] sm:w-[500px] h-auto bg-white hover:shadow-2xl hover:bg-orange-500 py-14 px-14 rounded-3xl transition-all duration-500 ease-in-out">
+          <div className="w-[90%] sm:w-[500px] h-auto bg-white hover:shadow-2xl md:w-[350px] md:h-[500px] lg:w-[85%] lg:h-[95%] hover:bg-orange-500 py-14 px-14 rounded-3xl transition-all duration-500 ease-in-out">
             <img
               src={rec}
               alt="React-icon"
@@ -31,7 +31,7 @@ const Expertise = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="w-[90%] sm:w-[500px] h-auto bg-white hover:shadow-2xl hover:bg-orange-500 py-14 px-14 rounded-3xl transition-all duration-500 ease-in-out">
+          <div className="w-[90%] sm:w-[500px] h-auto bg-white hover:shadow-2xl hover:bg-orange-500 py-14 px-14 md:w-[350px] md:h-[500px] rounded-3xl lg:w-[85%] lg:h-[95%] transition-all duration-500 ease-in-out">
             <img src={js} alt="js-icon" className="h-[100px] w-[100px] mb-5" />
             <h2 className="text-2xl font-bold mb-3">Experience & Direction</h2>
             <p className="text-md">
@@ -43,7 +43,7 @@ const Expertise = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="w-[90%] sm:w-[500px] h-auto bg-white hover:shadow-2xl hover:bg-orange-500 py-14 px-14 rounded-3xl transition-all duration-500 ease-in-out">
+          <div className="w-[90%] sm:w-[500px] h-auto bg-white hover:shadow-2xl md:w-[350px] md:h-[500px] lg:w-[85%] lg:h-[95%] hover:bg-orange-500 py-14 px-14 rounded-3xl transition-all duration-500 ease-in-out">
             <img
               src={uiux}
               alt="uiux-icon"
@@ -59,7 +59,7 @@ const Expertise = () => {
           </div>
 
           {/* Card 4 */}
-          <div className="w-[90%] sm:w-[500px] h-auto bg-white hover:shadow-2xl hover:bg-orange-500 py-14 px-14 rounded-3xl transition-all duration-500 ease-in-out">
+          <div className="w-[90%] sm:w-[500px] h-auto bg-white hover:shadow-2xl md:w-[350px] md:h-[500px] lg:w-[85%] lg:h-[95%] hover:bg-orange-500 py-14 px-14 rounded-3xl transition-all duration-500 ease-in-out">
             <img
               src={java}
               alt="java-icon"

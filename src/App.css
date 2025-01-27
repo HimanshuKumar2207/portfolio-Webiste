@@ -20,3 +20,23 @@ body {
   background: orangered;
   border-radius: 10px;
 }
+input[type="range"] {
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none;
+  background: transparent; /* Hide default track */
+  height: 8px;
+  border-radius: 4px;
+  position: relative;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0; /* Remove thumb */
+  height: 0;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 0; /* Remove thumb */
+  height: 0;
+}

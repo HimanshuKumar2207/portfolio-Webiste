@@ -64,35 +64,50 @@ const CustomMenu = () => {
           <Link
             to="/Home"
             className="py-2 hover:bg-slate-700 w-full px-3 rounded-lg"
-            onClick={closeMenu}
+            onClick={() => {
+              closeMenu();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
             Home
           </Link>
           <Link
             to="/About"
             className="py-2 w-full px-3 hover:bg-slate-700 rounded-lg"
-            onClick={closeMenu}
+            onClick={() => {
+              closeMenu();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
             About
           </Link>
           <Link
             to="/Work"
             className="py-2 w-full px-3 hover:bg-slate-700 rounded-lg"
-            onClick={closeMenu}
+            onClick={() => {
+              closeMenu();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
             Work
           </Link>
           <Link
             to="/Services"
             className="py-2 w-full px-3 hover:bg-slate-700 rounded-lg"
-            onClick={closeMenu}
+            onClick={() => {
+              closeMenu();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
             Services
           </Link>
           <Link
             to="/Contact"
             className="py-2 w-full px-3 hover:bg-slate-700 rounded-lg"
-            onClick={closeMenu}
+            onClick={() => {
+              closeMenu();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
             Contact
           </Link>

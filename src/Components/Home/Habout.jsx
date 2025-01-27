@@ -100,87 +100,131 @@ const Habout = () => {
 
           {/* Left Section */}
           <div className="w-[90%] mr-10 space-y-6">
-            <div className="skill-bar  ">
+            <div className="skill-bar">
               <label
                 htmlFor="frontend-skill"
                 className="block text-orange-500 font-bold text-sm sm:text-base"
               >
                 Frontend
               </label>
-              <input
-                id="frontend-skill"
-                type="range"
-                min="0"
-                max="100"
-                value="80"
-                className="w-full h-1"
-                step="1"
-              />
-              <div className="text-orange-500 text-sm sm:text-base ml-auto">
-                80%
+              <div className="relative">
+                {/* Range Input */}
+                <input
+                  id="frontend-skill"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="80" // Static value
+                  className="w-full h-1 bg-transparent appearance-none"
+                  step="1"
+                />
+                {/* Black Track */}
+                <div className="absolute top-3 left-0 w-full h-1 bg-slate-700 rounded-full"></div>
+                {/* Orange Progress */}
+                <div
+                  className="absolute top-3 left-0 h-1 bg-orange-500 rounded-full"
+                  style={{ width: "80%" }} // Static width based on the value
+                ></div>
+                {/* Percentage Display */}
+                <div className="absolute top-5 left-0 text-slate-700 text-sm sm:text-base font-semibold">
+                  80%
+                </div>
               </div>
             </div>
 
             <div className="skill-bar">
               <label
-                htmlFor="js-skill"
+                htmlFor="ui-ux-skill"
                 className="block text-orange-500 font-bold text-sm sm:text-base"
               >
-                UI & UX Design
+                UI & Ux
               </label>
-              <input
-                id="js-skill"
-                type="range"
-                min="0"
-                max="100"
-                value="70"
-                className="w-full h-1"
-                step="1"
-              />
-              <div className="text-orange-500 text-sm sm:text-base ml-auto">
-                70%
+              <div className="relative">
+                {/* Range Input */}
+                <input
+                  id="ui-ux skill"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="70" // Static value
+                  className="w-full h-1 bg-transparent appearance-none"
+                  step="1"
+                />
+                {/* Black Track */}
+                <div className="absolute top-3 left-0 w-full h-1 bg-slate-700 rounded-full"></div>
+                {/* Orange Progress */}
+                <div
+                  className="absolute top-3 left-0 h-1 bg-orange-500 rounded-full"
+                  style={{ width: "70%" }} // Static width based on the value
+                ></div>
+                {/* Percentage Display */}
+                <div className="absolute top-5 left-0 text-slate-700 text-sm sm:text-base font-semibold">
+                  70%
+                </div>
               </div>
             </div>
 
             <div className="skill-bar">
               <label
-                htmlFor="java-skill"
+                htmlFor="Java"
                 className="block text-orange-500 font-bold text-sm sm:text-base"
               >
                 Java
               </label>
-              <input
-                id="java-skill"
-                type="range"
-                min="0"
-                max="100"
-                value="70"
-                className="w-full h-1"
-                step="1"
-              />
-              <div className="text-orange-500 text-sm sm:text-base ml-auto">
-                70%
+              <div className="relative">
+                {/* Range Input */}
+                <input
+                  id="java"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="70" // Static value
+                  className="w-full h-1 bg-transparent appearance-none"
+                  step="1"
+                />
+                {/* Black Track */}
+                <div className="absolute top-3 left-0 w-full h-1 bg-slate-700 rounded-full"></div>
+                {/* Orange Progress */}
+                <div
+                  className="absolute top-3 left-0 h-1 bg-orange-500 rounded-full"
+                  style={{ width: "70%" }} // Static width based on the value
+                ></div>
+                {/* Percentage Display */}
+                <div className="absolute top-5 left-0 text-slate-700 text-sm sm:text-base font-semibold">
+                  70%
+                </div>
               </div>
             </div>
 
             <div className="skill-bar">
               <label
-                htmlFor="css-skill"
-                className="text-orange-500 font-bold text-sm sm:text-base"
+                htmlFor="Communication"
+                className="block text-orange-500 font-bold text-sm sm:text-base"
               >
                 Communication
               </label>
-              <input
-                id="css-skill"
-                type="range"
-                min="0"
-                max="100"
-                value="90"
-                className="w-full h-1"
-                step="1"
-              />
-              <div className="text-orange-500 text-sm sm:text-base ml-auto">
-                90%
+              <div className="relative">
+                {/* Range Input */}
+                <input
+                  id="Communication"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="90" // Static value
+                  className="w-full h-1 bg-transparent appearance-none"
+                  step="1"
+                />
+                {/* Black Track */}
+                <div className="absolute top-3 left-0 w-full h-1 bg-slate-700 rounded-full"></div>
+                {/* Orange Progress */}
+                <div
+                  className="absolute top-3 left-0 h-1 bg-orange-500 rounded-full"
+                  style={{ width: "90%" }} // Static width based on the value
+                ></div>
+                {/* Percentage Display */}
+                <div className="absolute top-5 left-0 text-slate-700 text-sm sm:text-base font-semibold">
+                  90%
+                </div>
               </div>
             </div>
           </div>
