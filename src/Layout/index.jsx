@@ -21,16 +21,14 @@ const Index = () => {
       <Navbar />
       <Routes>
         {/* Home Route */}
-
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-
         {/* Other Routes */}
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/" element={<Navigate to="/home" replace />} />
-
         {/* Redirect all non-matching routes to Home */}
       </Routes>
       <Footer />
