@@ -10,6 +10,8 @@ import health from "../../Assets/health.png";
 import imdb from "../../Assets/imdb.png";
 import medicare from "../../Assets/medicare.png";
 import portfolio from "../../Assets/Portfolio.png";
+import Finance from "../../Assets/finance.png";
+import University from "../../Assets/university.png";
 
 const images = [
   {
@@ -21,52 +23,66 @@ const images = [
   },
   {
     id: 2,
-    src: "https://portfolio-webiste-theta.vercel.app/home",
-    codeSrc: "https://github.com/HimanshuKumar2207/portfolio-Webiste", // Source code link
-    imgSrc: portfolio,
-    alt: "Portfolio Website",
+    src: "https://university-app-kappa.vercel.app/",
+    codeSrc: "https://github.com/HimanshuKumar2207/University_App", // Source code link
+    imgSrc: University,
+    alt: "University Website",
   },
   {
     id: 3,
-    src: "https://food-ordering-website-zeta-two.vercel.app/",
-    codeSrc: "https://github.com/HimanshuKumar2207/Food-ordering-website", // Source code link
-    imgSrc: food,
-    alt: "Food Ordering Website",
-  },
-  {
-    id: 4,
-    src: "https://gym-website-pi-ten.vercel.app/",
-    codeSrc: "https://github.com/HimanshuKumar2207/gym-website", // Source code link
-    imgSrc: Gym,
-    alt: "Gym Website",
-  },
-  {
-    id: 5,
-    src: "https://real-estae.vercel.app/",
-    codeSrc: "https://github.com/HimanshuKumar2207/Real-Estate", // Source code link
-    imgSrc: Estate,
-    alt: "Estate Website",
-  },
-  {
-    id: 6,
     src: "https://health-fitness-mqh4.vercel.app/",
     codeSrc: "https://github.com/HimanshuKumar2207/Health-Fitness", // Source code link
     imgSrc: health,
     alt: "Health Fitness Website",
   },
   {
+    id: 4,
+    src: "https://masfinancialservice.in/",
+    codeSrc: "https://github.com/HimanshuKumar2207/MAS-Finance", // Source code link
+    imgSrc: Finance,
+    alt: "Fintech Website",
+  },
+  {
+    id: 5,
+    src: "https://portfolio-webiste-theta.vercel.app/home",
+    codeSrc: "https://github.com/HimanshuKumar2207/portfolio-Webiste", // Source code link
+    imgSrc: portfolio,
+    alt: "Portfolio Website",
+  },
+  {
     id: 7,
+    src: "https://gym-website-pi-ten.vercel.app/",
+    codeSrc: "https://github.com/HimanshuKumar2207/gym-website", // Source code link
+    imgSrc: Gym,
+    alt: "Gym Website",
+  },
+  {
+    id: 8,
+    src: "https://real-estae.vercel.app/",
+    codeSrc: "https://github.com/HimanshuKumar2207/Real-Estate", // Source code link
+    imgSrc: Estate,
+    alt: "Estate Website",
+  },
+  {
+    id: 9,
     src: "https://imdb-clone-vert-alpha.vercel.app/",
     codeSrc: "https://github.com/HimanshuKumar2207/Imdb-clone", // Source code link
     imgSrc: imdb,
     alt: "Imdb Clone Website",
   },
   {
-    id: 8,
+    id: 10,
     src: "https://medicare-jet-kappa.vercel.app/",
     codeSrc: "https://github.com/HimanshuKumar2207/Medicare", // Source code link
     imgSrc: medicare,
     alt: "Medicare Website",
+  },
+  {
+    id:10,
+    src: "https://food-ordering-website-zeta-two.vercel.app/",
+    codeSrc: "https://github.com/HimanshuKumar2207/Food-ordering-website", // Source code link
+    imgSrc: food,
+    alt: "Food Ordering Website",
   },
 ];
 
